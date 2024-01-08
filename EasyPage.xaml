@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Wordle.EasyPage">
+
+    <Grid>
+        <Image Source="mainpageback.png" Aspect="AspectFill" />
+        <Label HorizontalOptions="Center" TextColor="DarkCyan" TextDecorations="Underline" FontSize="Large" Text="Enter a letter in each box of row 1 and hit submit to start" FontAttributes="Bold" />
+        <Grid RowDefinitions="*,*,*,*,*,*,*" ColumnDefinitions="*,*,*,*,*">
+
+            <Entry x:Name="Row1_0" Grid.Row="0" Grid.Column="0" Margin="5" HorizontalTextAlignment="Center" PlaceholderColor="Black" Placeholder="ROW 1" MaxLength="1"/> <!--created the rows-->
+            <Entry x:Name="Row1_1" Grid.Row="0" Grid.Column="1" Margin="5" HorizontalTextAlignment="Center" PlaceholderColor="Black" Placeholder="ROW 1" MaxLength="1"/>
+            <Entry x:Name="Row1_2" Grid.Row="0" Grid.Column="2" Margin="5" HorizontalTextAlignment="Center" PlaceholderColor="Black" Placeholder="ROW 1" MaxLength="1"/>
+            <Entry x:Name="Row1_3" Grid.Row="0" Grid.Column="3" Margin="5" HorizontalTextAlignment="Center" PlaceholderColor="Black" Placeholder="ROW 1" MaxLength="1"/>
+            <Entry x:Name="Row1_4" Grid.Row="0" Grid.Column="4" Margin="5" HorizontalTextAlignment="Center" PlaceholderColor="Black" Placeholder="ROW 1" MaxLength="1"/>
+
+            <Entry x:Name="Row2_0" Grid.Row="1" Grid.Column="0" Margin="5" PlaceholderColor="Black" Placeholder="ROW 2" HorizontalTextAlignment="Center" MaxLength="1"/>
+            <Entry x:Name="Row2_1" Grid.Row="1" Grid.Column="1" Margin="5" PlaceholderColor="Black" Placeholder="ROW 2" HorizontalTextAlignment="Center" MaxLength="1"/>
+            <Entry x:Name="Row2_2" Grid.Row="1" Grid.Column="2" Margin="5" PlaceholderColor="Black" Placeholder="ROW 2" HorizontalTextAlignment="Center" MaxLength="1"/>
+            <Entry x:Name="Row2_3" Grid.Row="1" Grid.Column="3" Margin="5" PlaceholderColor="Black" Placeholder="ROW 2" HorizontalTextAlignment="Center" MaxLength="1"/>
+            <Entry x:Name="Row2_4" Grid.Row="1" Grid.Column="4" Margin="5" PlaceholderColor="Black" Placeholder="ROW 2" HorizontalTextAlignment="Center" MaxLength="1"/>
+
+            <Entry x:Name="Row3_0" Grid.Row="2" Grid.Column="0" Margin="5" PlaceholderColor="Black" Placeholder="ROW 3" HorizontalTextAlignment="Center" MaxLength="1"/>
+            <Entry x:Name="Row3_1" Grid.Row="2" Grid.Column="1" Margin="5" PlaceholderColor="Black" Placeholder="ROW 3" HorizontalTextAlignment="Center" MaxLength="1"/>
+            <Entry x:Name="Row3_2" Grid.Row="2" Grid.Column="2" Margin="5" PlaceholderColor="Black" Placeholder="ROW 3" HorizontalTextAlignment="Center" MaxLength="1"/>
+            <Entry x:Name="Row3_3" Grid.Row="2" Grid.Column="3" Margin="5" PlaceholderColor="Black" Placeholder="ROW 3" HorizontalTextAlignment="Center" MaxLength="1"/>
+            <Entry x:Name="Row3_4" Grid.Row="2" Grid.Column="4" Margin="5" PlaceholderColor="Black" Placeholder="ROW 3" HorizontalTextAlignment="Center" MaxLength="1"/>
+
+            <Entry x:Name="Row4_0" Grid.Row="3" Grid.Column="0" Margin="5" PlaceholderColor="Black" Placeholder="ROW 4" HorizontalTextAlignment="Center" MaxLength="1"/>
+            <Entry x:Name="Row4_1" Grid.Row="3" Grid.Column="1" Margin="5" PlaceholderColor="Black" Placeholder="ROW 4" HorizontalTextAlignment="Center" MaxLength="1"/>
+            <Entry x:Name="Row4_2" Grid.Row="3" Grid.Column="2" Margin="5" PlaceholderColor="Black" Placeholder="ROW 4" HorizontalTextAlignment="Center" MaxLength="1"/>
+            <Entry x:Name="Row4_3" Grid.Row="3" Grid.Column="3" Margin="5" PlaceholderColor="Black" Placeholder="ROW 4" HorizontalTextAlignment="Center" MaxLength="1"/>
+            <Entry x:Name="Row4_4" Grid.Row="3" Grid.Column="4" Margin="5" PlaceholderColor="Black" Placeholder="ROW 4" HorizontalTextAlignment="Center" MaxLength="1"/>
+
+            <Entry x:Name="Row5_0" Grid.Row="4" Grid.Column="0" Margin="5" PlaceholderColor="Black" Placeholder="ROW 5" HorizontalTextAlignment="Center" MaxLength="1"/>
+            <Entry x:Name="Row5_1" Grid.Row="4" Grid.Column="1" Margin="5" PlaceholderColor="Black" Placeholder="ROW 5" HorizontalTextAlignment="Center" MaxLength="1"/>
+            <Entry x:Name="Row5_2" Grid.Row="4" Grid.Column="2" Margin="5" PlaceholderColor="Black" Placeholder="ROW 5" HorizontalTextAlignment="Center" MaxLength="1"/>
+            <Entry x:Name="Row5_3" Grid.Row="4" Grid.Column="3" Margin="5" PlaceholderColor="Black" Placeholder="ROW 5" HorizontalTextAlignment="Center" MaxLength="1"/>
+            <Entry x:Name="Row5_4" Grid.Row="4" Grid.Column="4" Margin="5" PlaceholderColor="Black" Placeholder="ROW 5" HorizontalTextAlignment="Center" MaxLength="1"/>
+
+
+            <Button x:Name="setButton" Grid.Row="6" Grid.Column="2" Margin="5" Text="Set Word" Clicked="setWordClicked" TextColor="Red"/> <!--set button used to start the game and reveal the sumbit button + locks first row-->
+            <Button x:Name="submitButton" Grid.Row="6" Grid.Column="3" Margin="5" Text="SUBMIT" IsVisible="false" Clicked="submitClicked" TextColor="Red"/> <!--sumbit button submits all other rows + locks them based on how many times it was clicked -->
+            <Button Grid.Row="6" Grid.Column="4" Margin="5" Text="RETURN" Clicked="returnClicked" TextColor="Red"/> <!--sends user back to main page-->
+
+
+        </Grid>
+    </Grid>
+
+</ContentPage>

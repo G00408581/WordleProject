@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Wordle.MainPage">
+
+    <Grid>
+        <Image Source="mainpageback.png" Aspect="AspectFill" />
+        <StackLayout BackgroundColor="Transparent" VerticalOptions="CenterAndExpand">
+            <Label HorizontalOptions="Center" TextColor="DarkCyan" TextDecorations="Underline" FontSize="Large" Text="Welcome to Wordle" FontAttributes="Bold"/>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                <Button Text="EASY MODE" Clicked="EasyButton_Clicked" TextColor="Black" Margin="5" BackgroundColor="LightBlue"/> <!--sends user to easy page-->
+                <Button Text="HARD MODE" Clicked="HardButton_Clicked" TextColor="Black" Margin="5" BackgroundColor="LightBlue"/>  <!--sends user to hard page-->
+            </StackLayout>
+            <Label x:Name="Label" Text="TIP: IN HARD MODE YOU HAVE 60 SECONDS TO GUESS THE RIGHT WORD" FontSize="Large" FontAttributes="Bold" TextColor="Red"/> <!--tip scrolling across screen-->
+        </StackLayout>
+    </Grid>
+</ContentPage>
